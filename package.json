@@ -1,0 +1,37 @@
+{
+  "name": "retrixbot-messages",
+  "version": "0.0.1",
+  "description": "REPO FOR RETRIXBOT CHATS",
+  "engines": {
+    "node": "16.9.x",
+    "npm": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "node build/index.js && git add . && git commit -m 'vods' && git push -u origin master",
+    "lint": "eslint . --ext .ts",
+    "postinstall": "tsc"
+  },
+  "keywords": [],
+  "author": "RetrixUY",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "booyapi": "^1.0.13",
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.4"
+  }
+}
